@@ -12,7 +12,7 @@ import { AuthModule } from './auth/auth.module';
 
 @Module({
   imports: [
-    MongooseModule.forRoot('mongodb://127.0.0.1/some_database'),
+    MongooseModule.forRoot(process.env.MONGO_URL),
     DivisionsModule,
     ClassesModule,
     StudentsModule,
