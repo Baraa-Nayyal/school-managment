@@ -26,16 +26,19 @@ export class DivisionsController {
   }
 
   @Get()
+  @UseGuards(JwtAuthGuard)
   GetDivisions() {
     return this.divisionsService.GetDivisions();
   }
 
   @Post(':id')
+  @UseGuards(JwtAuthGuard)
   UpdateDivision(@Param('id') id: string, @Body() updateDivisionDto: AddDivisionDto) {
     return this.divisionsService.UpdateDivision(id, updateDivisionDto);
   }
 
   @Delete(':id')
+  @UseGuards(JwtAuthGuard)
   async DeleteDivision(@Param('id') id: string) {
     const isValid = mongoose.Types.ObjectId.isValid(id);
     if (!isValid) throw new HttpException('Invalid Id', 404);
