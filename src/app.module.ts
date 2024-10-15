@@ -9,17 +9,19 @@ import { InvoicesModule } from './invoices/invoices.module';
 import { TeachersModule } from './teachers/teachers.module';
 import { DriversModule } from './drivers/drivers.module';
 import { AuthModule } from './auth/auth.module';
+import { ConfigModule } from '@nestjs/config';
 
 @Module({
   imports: [
-    MongooseModule.forRoot(process.env.MONGO_URL),
+    ConfigModule.forRoot(),
+    MongooseModule.forRoot(process.env.MONGO_PUBLIC_URL),
     DivisionsModule,
     ClassesModule,
     StudentsModule,
     InvoicesModule,
     TeachersModule,
     DriversModule,
-    AuthModule
+    AuthModule,
   ],
   controllers: [AppController],
   providers: [AppService],
