@@ -1,4 +1,4 @@
-import { Body, Controller, Delete, Get, Param, Post } from '@nestjs/common';
+import { Body, Controller, Delete, Get, HttpCode, Param, Post } from '@nestjs/common';
 import { ClassesService } from './classes.service';
 import { AddClassDto } from 'src/dto/classes';
 
@@ -17,6 +17,7 @@ export class ClassesController {
   }
 
   @Post()
+  @HttpCode(200)
   AddClass(@Body() addClassDto: AddClassDto) {
     return this.classesService.AddClass(addClassDto);
   }

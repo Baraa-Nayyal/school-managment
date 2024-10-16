@@ -16,7 +16,9 @@ export class DivisionsService {
   }
 
   async UpdateDivision(id: string, updateDivisionDto: AddDivisionDto) {
-    return this.divisionModel.findByIdAndUpdate(id, updateDivisionDto, { new: true });
+    return this.divisionModel.findByIdAndUpdate(id, updateDivisionDto, {
+      new: true,
+    });
   }
 
   GetDivisions() {

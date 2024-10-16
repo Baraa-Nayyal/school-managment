@@ -2,6 +2,7 @@ import {
   IsArray,
   IsMongoId,
   IsNotEmpty,
+  IsNumber,
   IsOptional,
   IsString,
 } from 'class-validator';
@@ -10,6 +11,26 @@ export class AddStudentDto {
   @IsString()
   @IsNotEmpty()
   name: string;
+
+  @IsOptional()
+  dadName: string;
+
+  @IsOptional()
+  momName: string;
+
+  @IsOptional()
+  area: string;
+
+  @IsNumber()
+  @IsOptional()
+  dadNumber: string;
+
+  @IsOptional()
+  birthDate: string;
+
+  @IsNumber()
+  @IsOptional()
+  momNumber: string;
 
   @IsMongoId()
   @IsNotEmpty()
