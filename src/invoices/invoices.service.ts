@@ -125,6 +125,10 @@ export class InvoiceService {
     };
   }
 
+  async deleteInvoice(id: string) {
+    return this.invoiceModel.findByIdAndDelete(id);
+  }
+
   async addPayment(addPaymentDto: AddPaymentDto) {
     const payment = new this.paymentModel({
       ...addPaymentDto,

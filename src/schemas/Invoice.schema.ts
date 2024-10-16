@@ -6,21 +6,29 @@ import { Family } from './Family.schema';
 
 @Schema()
 export class Invoice {
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Student', required: false })
+  @Prop({
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Student',
+    required: false,
+  })
   studentId: Student;
 
-  @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Family', required: false })
+  @Prop({
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Family',
+    required: false,
+  })
   familyId?: Family;
 
   @Prop({ required: true })
   totalAmount: number;
 
   @Prop({ required: true })
-  schoolPrice: number;  
+  schoolPrice: number;
 
   @Prop({ required: true })
-  busPrice: number;    
-  
+  busPrice: number;
+
   @Prop({ required: true })
   date: string;
 

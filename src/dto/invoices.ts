@@ -61,6 +61,11 @@ export class AddPaymentDto {
   @Min(0)
   paidBusAmount: number;
 
+  @IsNumber()
+  @IsOptional()
+  @IsPositive()
+  receiptNumber: number;
+
   @IsString()
   @IsOptional()
   date?: string;

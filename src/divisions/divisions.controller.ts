@@ -22,7 +22,7 @@ export class DivisionsController {
   @UseGuards(JwtAuthGuard)
   @HttpCode(200)
   AddDivision(@Body() addDivisionDto: AddDivisionDto) {
-    this.divisionsService.AddDivision(addDivisionDto);
+    return this.divisionsService.AddDivision(addDivisionDto);
   }
 
   @Get()
@@ -33,7 +33,10 @@ export class DivisionsController {
 
   @Post(':id')
   @UseGuards(JwtAuthGuard)
-  UpdateDivision(@Param('id') id: string, @Body() updateDivisionDto: AddDivisionDto) {
+  UpdateDivision(
+    @Param('id') id: string,
+    @Body() updateDivisionDto: AddDivisionDto,
+  ) {
     return this.divisionsService.UpdateDivision(id, updateDivisionDto);
   }
 

@@ -18,6 +18,9 @@ export class Payment {
   paidBusAmount: number;
 
   @Prop({ required: true })
+  receiptNumber: number;
+
+  @Prop({ required: true })
   date: string;
 }
 

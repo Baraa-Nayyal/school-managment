@@ -11,6 +11,24 @@ export class Student {
   @Prop({ required: true })
   name: string;
 
+  @Prop({ required: false })
+  dadName: string;
+
+  @Prop({ required: false })
+  momName: string;
+
+  @Prop({ required: false })
+  area: string;
+
+  @Prop({ required: false })
+  birthDate: string;
+
+  @Prop({ required: false })
+  dadNumber: string;
+
+  @Prop({ required: false })
+  momNumber: string;
+
   @Prop({ type: mongoose.Schema.Types.ObjectId, ref: 'Class' })
   class: Class;
 
