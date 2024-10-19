@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { Invoice } from './Invoice.schema';
+import { Invoice } from '../invoices/Invoice.schema';
 export declare class Payment {
     invoiceId: Invoice;
     paidSchoolAmount: number;

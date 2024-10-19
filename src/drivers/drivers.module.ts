@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { DriversService } from './drivers.service';
 import { DriverController } from './drivers.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Driver, DriverSchema } from 'src/schemas/Driver.schema';
+import { Driver, DriverSchema } from './Driver.schema';
 
 @Module({
   imports: [

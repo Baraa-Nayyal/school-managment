@@ -2,9 +2,9 @@ import { BadRequestException, Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { AddPaymentDto, CreateInvoiceDto } from 'src/dto/invoices';
-import { Invoice } from 'src/schemas/Invoice.schema';
-import { Payment } from 'src/schemas/Payment.schema';
-import { Student } from 'src/schemas/Student.schema';
+import { Invoice } from './Invoice.schema';
+import { Payment } from './Payment.schema';
+import { Student } from './Student.schema';
 
 @Injectable()
 export class InvoiceService {

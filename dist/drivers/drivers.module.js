@@ -11,7 +11,7 @@ const common_1 = require("@nestjs/common");
 const drivers_service_1 = require("./drivers.service");
 const drivers_controller_1 = require("./drivers.controller");
 const mongoose_1 = require("@nestjs/mongoose");
-const Driver_schema_1 = require("../schemas/Driver.schema");
+const Driver_schema_1 = require("./Driver.schema");
 let DriversModule = class DriversModule {
 };
 exports.DriversModule = DriversModule;

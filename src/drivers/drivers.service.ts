@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { CreateDriverDto } from 'src/dto/drivers';
-import { Driver } from 'src/schemas/Driver.schema';
+import { Driver } from './Driver.schema';
 
 @Injectable()
 export class DriversService {
@@ -22,7 +22,9 @@ export class DriversService {
   }
 
   async updateDriver(driverId: string, updateDriverDto: CreateDriverDto) {
-    return this.driverModel.findByIdAndUpdate(driverId, updateDriverDto, { new: true }).exec();
+    return this.driverModel
+      .findByIdAndUpdate(driverId, updateDriverDto, { new: true })
+      .exec();
   }
 
   async deleteDriver(driverId: string) {

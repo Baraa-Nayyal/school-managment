@@ -8,13 +8,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var _a, _b;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.StudentSchema = exports.Student = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
 const Classe_schema_1 = require("./Classe.schema");
-const Division_schema_1 = require("./Division.schema");
-const Driver_schema_1 = require("./Driver.schema");
+const Division_schema_1 = require("../divisions/Division.schema");
+const Driver_schema_1 = require("../drivers/Driver.schema");
 const Family_schema_1 = require("./Family.schema");
 let Student = class Student {
 };
@@ -49,7 +50,7 @@ __decorate([
 ], Student.prototype, "momNumber", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Class' }),
-    __metadata("design:type", Classe_schema_1.Class)
+    __metadata("design:type", typeof (_a = typeof Classe_schema_1.Class !== "undefined" && Classe_schema_1.Class) === "function" ? _a : Object)
 ], Student.prototype, "class", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Division' }),
@@ -65,7 +66,7 @@ __decorate([
 ], Student.prototype, "invoices", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Family', default: null }),
-    __metadata("design:type", Family_schema_1.Family)
+    __metadata("design:type", typeof (_b = typeof Family_schema_1.Family !== "undefined" && Family_schema_1.Family) === "function" ? _b : Object)
 ], Student.prototype, "family", void 0);
 exports.Student = Student = __decorate([
     (0, mongoose_1.Schema)()

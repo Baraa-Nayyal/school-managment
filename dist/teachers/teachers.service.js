@@ -16,7 +16,7 @@ exports.TeacherService = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-const Teacher_schema_1 = require("../schemas/Teacher.schema");
+const Teacher_schema_1 = require("./Teacher.schema");
 let TeacherService = class TeacherService {
     constructor(teacherModel) {
         this.teacherModel = teacherModel;

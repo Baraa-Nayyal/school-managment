@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { Division } from './Division.schema';
+import { Division } from '../divisions/Division.schema';
 import { Class } from './Classe.schema';
 declare class ClassDivision {
     classId: Class;

@@ -16,7 +16,7 @@ exports.DivisionsService = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-const Division_schema_1 = require("../schemas/Division.schema");
+const Division_schema_1 = require("./Division.schema");
 let DivisionsService = class DivisionsService {
     constructor(divisionModel) {
         this.divisionModel = divisionModel;

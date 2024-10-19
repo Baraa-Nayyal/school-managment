@@ -2,9 +2,9 @@ import { Module } from '@nestjs/common';
 import { InvoiceService } from './invoices.service';
 import { InvoiceController } from './invoices.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Invoice, InvoiceSchema } from 'src/schemas/Invoice.schema';
-import { Payment, PaymentSchema } from 'src/schemas/Payment.schema';
-import { Student, StudentSchema } from 'src/schemas/Student.schema';
+import { Invoice, InvoiceSchema } from './Invoice.schema';
+import { Payment, PaymentSchema } from './Payment.schema';
+import { Student, StudentSchema } from './Student.schema';
 
 @Module({
   imports: [

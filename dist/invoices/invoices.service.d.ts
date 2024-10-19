@@ -1,8 +1,8 @@
 import { Model } from 'mongoose';
 import { AddPaymentDto, CreateInvoiceDto } from 'src/dto/invoices';
-import { Invoice } from 'src/schemas/Invoice.schema';
-import { Payment } from 'src/schemas/Payment.schema';
-import { Student } from 'src/schemas/Student.schema';
+import { Invoice } from './Invoice.schema';
+import { Payment } from './Payment.schema';
+import { Student } from './Student.schema';
 export declare class InvoiceService {
     private invoiceModel;
     private paymentModel;
@@ -15,27 +15,27 @@ export declare class InvoiceService {
     }>;
     getInvoices(): Promise<{
         remainingAmount: number;
-        totalPaid: number;
-        name: string;
-        studentId: Student;
-        familyId?: import("../schemas/Family.schema").Family;
+        totalPaid: Payment;
+        name: any;
+        studentId: import("../students/Student.schema").Student;
+        familyId?: Student;
         totalAmount: number;
         schoolPrice: number;
         busPrice: number;
         date: string;
-        payments: Payment[];
+        payments: Student[];
         _id: import("mongoose").Types.ObjectId;
     }[]>;
     getInvoiceById(invoiceId: string): Promise<{
         remainingAmount: number;
-        totalPaid: number;
-        studentId: Student;
-        familyId?: import("../schemas/Family.schema").Family;
+        totalPaid: Payment;
+        studentId: import("../students/Student.schema").Student;
+        familyId?: Student;
         totalAmount: number;
         schoolPrice: number;
         busPrice: number;
         date: string;
-        payments: Payment[];
+        payments: Student[];
         _id: import("mongoose").Types.ObjectId;
     }>;
     deleteInvoice(id: string): Promise<import("mongoose").Document<unknown, {}, Invoice> & Invoice & {

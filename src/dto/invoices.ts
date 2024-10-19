@@ -11,7 +11,7 @@ import {
   ValidateIf,
 } from 'class-validator';
 import mongoose from 'mongoose';
-import { Student } from 'src/schemas/Student.schema';
+import { Student } from './Student.schema';
 
 export class CreateInvoiceDto {
   @IsMongoId()

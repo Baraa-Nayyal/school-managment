@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 exports.PaymentSchema = exports.Payment = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-const Invoice_schema_1 = require("./Invoice.schema");
+const Invoice_schema_1 = require("../invoices/Invoice.schema");
 let Payment = class Payment {
 };
 exports.Payment = Payment;

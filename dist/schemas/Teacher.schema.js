@@ -8,17 +8,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.TeacherSchema = exports.Teacher = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-const Division_schema_1 = require("./Division.schema");
+const Division_schema_1 = require("../divisions/Division.schema");
 const Classe_schema_1 = require("./Classe.schema");
 let ClassDivision = class ClassDivision {
 };
 __decorate([
     (0, mongoose_1.Prop)({ type: mongoose_2.default.Schema.Types.ObjectId, ref: 'Class', required: true }),
-    __metadata("design:type", Classe_schema_1.Class)
+    __metadata("design:type", typeof (_a = typeof Classe_schema_1.Class !== "undefined" && Classe_schema_1.Class) === "function" ? _a : Object)
 ], ClassDivision.prototype, "classId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({

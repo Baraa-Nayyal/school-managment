@@ -1,8 +1,8 @@
 import { Model } from 'mongoose';
 import { AddStudentDto, CreateFamilyDto } from 'src/dto/students';
-import { Family } from 'src/schemas/Family.schema';
-import { Invoice } from 'src/schemas/Invoice.schema';
-import { Student } from 'src/schemas/Student.schema';
+import { Family } from './Family.schema';
+import { Invoice } from './Invoice.schema';
+import { Student } from './Student.schema';
 export declare class StudentsService {
     private studentModel;
     private invoiceModel;

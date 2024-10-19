@@ -1,5 +1,5 @@
 import { Model } from 'mongoose';
-import { Division } from 'src/schemas/Division.schema';
+import { Division } from './Division.schema';
 import { AddDivisionDto } from '../dto/devisions';
 export declare class DivisionsService {
     private divisionModel;

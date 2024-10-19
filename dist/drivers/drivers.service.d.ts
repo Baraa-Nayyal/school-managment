@@ -1,6 +1,6 @@
 import { Model } from 'mongoose';
 import { CreateDriverDto } from 'src/dto/drivers';
-import { Driver } from 'src/schemas/Driver.schema';
+import { Driver } from './Driver.schema';
 export declare class DriversService {
     private driverModel;
     constructor(driverModel: Model<Driver>);

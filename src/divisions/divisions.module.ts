@@ -2,7 +2,7 @@ import { Module } from '@nestjs/common';
 import { DivisionsService } from './divisions.service';
 import { DivisionsController } from './divisions.controller';
 import { MongooseModule } from '@nestjs/mongoose';
-import { Division, DivisionSchema } from 'src/schemas/Division.schema';
+import { Division, DivisionSchema } from './Division.schema';
 
 @Module({
   imports: [

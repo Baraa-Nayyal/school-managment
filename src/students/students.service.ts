@@ -6,9 +6,9 @@ import {
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
 import { AddStudentDto, CreateFamilyDto } from 'src/dto/students';
-import { Family } from 'src/schemas/Family.schema';
-import { Invoice } from 'src/schemas/Invoice.schema';
-import { Student } from 'src/schemas/Student.schema';
+import { Family } from './Family.schema';
+import { Invoice } from './Invoice.schema';
+import { Student } from './Student.schema';
 
 @Injectable()
 export class StudentsService {
@@ -50,7 +50,7 @@ export class StudentsService {
   }
 
   async addFamily(createFamilyDto: CreateFamilyDto) {
-    console.log(createFamilyDto)
+    console.log(createFamilyDto);
     const students = await this.studentModel.find({
       _id: { $in: createFamilyDto.studentIds },
     });
@@ -97,7 +97,7 @@ export class StudentsService {
   }
 
   async getStudentById(studentId: string) {
-    console.log(studentId)
+    console.log(studentId);
     const student = await this.studentModel
       .findById(studentId)
       .populate('class')

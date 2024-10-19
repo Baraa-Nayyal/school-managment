@@ -16,7 +16,7 @@ exports.DriversService = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-const Driver_schema_1 = require("../schemas/Driver.schema");
+const Driver_schema_1 = require("./Driver.schema");
 let DriversService = class DriversService {
     constructor(driverModel) {
         this.driverModel = driverModel;
@@ -32,7 +32,9 @@ let DriversService = class DriversService {
         return this.driverModel.findById(driverId).exec();
     }
     async updateDriver(driverId, updateDriverDto) {
-        return this.driverModel.findByIdAndUpdate(driverId, updateDriverDto, { new: true }).exec();
+        return this.driverModel
+            .findByIdAndUpdate(driverId, updateDriverDto, { new: true })
+            .exec();
     }
     async deleteDriver(driverId) {
         return this.driverModel.findByIdAndDelete(driverId).exec();

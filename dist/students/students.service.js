@@ -16,9 +16,9 @@ exports.StudentsService = void 0;
 const common_1 = require("@nestjs/common");
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-const Family_schema_1 = require("../schemas/Family.schema");
-const Invoice_schema_1 = require("../schemas/Invoice.schema");
-const Student_schema_1 = require("../schemas/Student.schema");
+const Family_schema_1 = require("./Family.schema");
+const Invoice_schema_1 = require("./Invoice.schema");
+const Student_schema_1 = require("./Student.schema");
 let StudentsService = class StudentsService {
     constructor(studentModel, invoiceModel, familyModel) {
         this.studentModel = studentModel;

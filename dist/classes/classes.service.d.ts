@@ -1,6 +1,6 @@
 import { Model } from 'mongoose';
 import { AddClassDto } from 'src/dto/classes';
-import { Class } from 'src/schemas/Classe.schema';
+import { Class } from './Classe.schema';
 export declare class ClassesService {
     private classesModel;
     constructor(classesModel: Model<Class>);

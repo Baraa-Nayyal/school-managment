@@ -11,7 +11,7 @@ const common_1 = require("@nestjs/common");
 const classes_service_1 = require("./classes.service");
 const classes_controller_1 = require("./classes.controller");
 const mongoose_1 = require("@nestjs/mongoose");
-const Classe_schema_1 = require("../schemas/Classe.schema");
+const Classe_schema_1 = require("./Classe.schema");
 let ClassesModule = class ClassesModule {
 };
 exports.ClassesModule = ClassesModule;

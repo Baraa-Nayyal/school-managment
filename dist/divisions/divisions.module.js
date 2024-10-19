@@ -11,7 +11,7 @@ const common_1 = require("@nestjs/common");
 const divisions_service_1 = require("./divisions.service");
 const divisions_controller_1 = require("./divisions.controller");
 const mongoose_1 = require("@nestjs/mongoose");
-const Division_schema_1 = require("../schemas/Division.schema");
+const Division_schema_1 = require("./Division.schema");
 let DivisionsModule = class DivisionsModule {
 };
 exports.DivisionsModule = DivisionsModule;

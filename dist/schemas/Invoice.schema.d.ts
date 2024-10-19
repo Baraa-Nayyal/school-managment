@@ -1,5 +1,5 @@
 import mongoose from 'mongoose';
-import { Student } from './Student.schema';
+import { Student } from '../students/Student.schema';
 import { Payment } from './Payment.schema';
 import { Family } from './Family.schema';
 export declare class Invoice {

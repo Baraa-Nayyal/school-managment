@@ -8,11 +8,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+var _a;
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.InvoiceSchema = exports.Invoice = void 0;
 const mongoose_1 = require("@nestjs/mongoose");
 const mongoose_2 = require("mongoose");
-const Student_schema_1 = require("./Student.schema");
+const Student_schema_1 = require("../students/Student.schema");
 const Family_schema_1 = require("./Family.schema");
 let Invoice = class Invoice {
 };
@@ -31,7 +32,7 @@ __decorate([
         ref: 'Family',
         required: false,
     }),
-    __metadata("design:type", Family_schema_1.Family)
+    __metadata("design:type", typeof (_a = typeof Family_schema_1.Family !== "undefined" && Family_schema_1.Family) === "function" ? _a : Object)
 ], Invoice.prototype, "familyId", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
