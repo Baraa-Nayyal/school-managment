@@ -4,7 +4,7 @@ import { InvoiceController } from './invoices.controller';
 import { MongooseModule } from '@nestjs/mongoose';
 import { Invoice, InvoiceSchema } from './Invoice.schema';
 import { Payment, PaymentSchema } from './Payment.schema';
-import { Student, StudentSchema } from './Student.schema';
+import { Student, StudentSchema } from '../students/Student.schema';
 
 @Module({
   imports: [

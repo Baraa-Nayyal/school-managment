@@ -5,9 +5,9 @@ import {
 } from '@nestjs/common';
 import { InjectModel } from '@nestjs/mongoose';
 import { Model } from 'mongoose';
-import { AddStudentDto, CreateFamilyDto } from 'src/dto/students';
+import { AddStudentDto, CreateFamilyDto } from './students';
 import { Family } from './Family.schema';
-import { Invoice } from './Invoice.schema';
+import { Invoice } from '../invoices/Invoice.schema';
 import { Student } from './Student.schema';
 
 @Injectable()

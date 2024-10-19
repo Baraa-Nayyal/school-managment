@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose from 'mongoose';
-import { Class } from './Classe.schema';
+import { Class } from '../classes/Classe.schema';
 import { Division } from '../divisions/Division.schema';
 import { Invoice } from '../invoices/Invoice.schema';
 import { Driver } from '../drivers/Driver.schema';

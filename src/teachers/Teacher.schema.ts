@@ -1,7 +1,7 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import mongoose from 'mongoose';
 import { Division } from '../divisions/Division.schema';
-import { Class } from './Classe.schema';
+import { Class } from '../classes/Classe.schema';
 
 @Schema()
 class ClassDivision {

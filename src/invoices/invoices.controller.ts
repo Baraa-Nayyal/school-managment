@@ -1,7 +1,15 @@
-import { Body, Controller, Delete, Get, Param, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Param,
+  Post,
+  UseGuards,
+} from '@nestjs/common';
 import { InvoiceService } from './invoices.service';
-import { AddPaymentDto, CreateInvoiceDto } from 'src/dto/invoices';
-import { JwtAuthGuard } from 'src/auth/guards/jwt.guard';
+import { AddPaymentDto, CreateInvoiceDto } from './invoices';
+import { JwtAuthGuard } from '../auth/guards/jwt.guard';
 
 @Controller('invoices')
 export class InvoiceController {
@@ -21,9 +29,8 @@ export class InvoiceController {
 
   @Delete('delete/:id')
   DeleteInvoiceById(@Param('id') id: string) {
-    return this.invoiceService.deleteInvoice(id)
+    return this.invoiceService.deleteInvoice(id);
   }
-
 
   @Get('/details/:id')
   @UseGuards(JwtAuthGuard)

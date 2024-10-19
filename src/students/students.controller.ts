@@ -1,7 +1,16 @@
-import { Body, Controller, Delete, Get, Header, Param, Post, UseGuards } from '@nestjs/common';
+import {
+  Body,
+  Controller,
+  Delete,
+  Get,
+  Header,
+  Param,
+  Post,
+  UseGuards,
+} from '@nestjs/common';
 import { StudentsService } from './students.service';
-import { AddStudentDto, CreateFamilyDto } from 'src/dto/students';
-import { JwtAuthGuard } from 'src/auth/guards/jwt.guard';
+import { AddStudentDto, CreateFamilyDto } from './students';
+import { JwtAuthGuard } from '../auth/guards/jwt.guard';
 
 @Controller('students')
 export class StudentsController {
@@ -56,7 +65,6 @@ export class StudentsController {
 
   // :TODO
   @UseGuards(JwtAuthGuard)
-
   @Get('/family')
   @UseGuards(JwtAuthGuard)
   async GetFamilies() {

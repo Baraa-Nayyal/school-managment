@@ -10,9 +10,9 @@ import {
   UseGuards,
 } from '@nestjs/common';
 import { DivisionsService } from './divisions.service';
-import { AddDivisionDto } from '../dto/devisions';
+import { AddDivisionDto } from './devisions';
 import mongoose from 'mongoose';
-import { JwtAuthGuard } from 'src/auth/guards/jwt.guard';
+import { JwtAuthGuard } from '../auth/guards/jwt.guard';
 
 @Controller('divisions')
 export class DivisionsController {
