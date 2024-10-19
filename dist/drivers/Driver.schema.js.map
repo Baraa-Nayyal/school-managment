@@ -1,0 +1,1 @@
+{"version":3,"file":"Driver.schema.js","sourceRoot":"","sources":["../../src/drivers/Driver.schema.ts"],"names":[],"mappings":";;;;;;;;;;;;AAAA,+CAA+D;AAGxD,IAAM,MAAM,GAAZ,MAAM,MAAM;CAGlB,CAAA;AAHY,wBAAM;AAEjB;IADC,IAAA,eAAI,EAAC,EAAE,QAAQ,EAAE,IAAI,EAAE,CAAC;;oCACZ;iBAFF,MAAM;IADlB,IAAA,iBAAM,GAAE;GACI,MAAM,CAGlB;AAEY,QAAA,YAAY,GAAG,wBAAa,CAAC,cAAc,CAAC,MAAM,CAAC,CAAC"}
